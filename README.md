@@ -137,17 +137,17 @@ For example;
 ### BNF Notation of Variable Declarations
 
 ```
-stmts   		: stmt SEMICOLON            		{;}
-		| COMMENT stmts					{;}
-        		| stmt SEMICOLON stmts	     		{;}
+stmts   	: stmt SEMICOLON            		{;}
+		| COMMENT stmts				{;}
+        	| stmt SEMICOLON stmts	     		{;}
 		;
 
-stmt   		 : TYPE_INT IDENT				{saveInt($2,0);}
-		| TYPE_INT IDENT ASSIGNMENT exp			{saveInt($2,$4);}
-		| TYPE_STR IDENT			   	{saveStr($2,"");}
-		| TYPE_STR IDENT ASSIGNMENT STRING		{saveStr($2,$4);}
-		| IDENT ASSIGNMENT STRING			{modifyStr($1,$3);}
-		| IDENT ASSIGNMENT exp				{modifyInt($1,$3);}
+stmt   		 : TYPE_INT IDENT			{saveInt($2,0);}
+		| TYPE_INT IDENT ASSIGNMENT exp		{saveInt($2,$4);}
+		| TYPE_STR IDENT			{saveStr($2,"");}
+		| TYPE_STR IDENT ASSIGNMENT STRING	{saveStr($2,$4);}
+		| IDENT ASSIGNMENT STRING		{modifyStr($1,$3);}
+		| IDENT ASSIGNMENT exp			{modifyInt($1,$3);}
 
 ```
 
@@ -173,8 +173,8 @@ term   		: INTEGER                   {$$ = $1;}
 ### BNF Notation of Logical Operators and Loops 
 
 ```
-stmt    		: IF condt scope		{;}	
-		| WHILE condt scope			{;}
+stmt    	: IF condt scope		{;}	
+		| WHILE condt scope		{;}
 		;
 
 condt		: exp GT condt						
