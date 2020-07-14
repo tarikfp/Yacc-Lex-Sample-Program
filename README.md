@@ -44,4 +44,18 @@ For example;
 0,734734 is NOT a string
 ```
 
+### Rules of Arithmetic Operators and Their Precedence
+#### Addition Operator(+)
+
+```
+[0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
+"+"                               return PLUS;
+```
+
+For example;
+
+```
+1+2; is acceptable and result is 3
+1++2; is NOT acceptable
+```
 
