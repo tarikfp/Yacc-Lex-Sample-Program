@@ -13,7 +13,7 @@ In my lexical code, I defined regular expression such as
 
 ```
 
-### Integer Declarations
+#### Integer Declarations
 
 ```
 [0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
@@ -28,7 +28,7 @@ For example;
 aaa is NOT num
 ```
 
-### String Declarations
+#### String Declarations
 
 ```
 \"[a-zA-Z0-9\ ]*\"          {strcpy(yylval.c,yytext);return STRING;}
@@ -122,6 +122,16 @@ For example;
 ```
 
 ### Precedence of the language's arithmetic operations
+
+Precedence Order:
+1-Multiplication(*)-Division(/)-Modulus(%)
+2-Addition(+)-Substraction(-)
+
+For example;
+
+```
+50+2*3;  This statement is valid and result is 56 (Use output command in order to see result in cmd)
+```
 
 
 
