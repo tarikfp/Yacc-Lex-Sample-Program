@@ -47,6 +47,8 @@ For example;
 ### Rules of Arithmetic Operators and Their Precedence
 #### Addition Operator(+)
 
+##### Moreover, for better and realistic architecture, we have to add semicolon for each calculating statement.
+
 ```
 [0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
 "+"                               return PLUS;
@@ -58,4 +60,68 @@ For example;
 1+2; is acceptable and result is 3
 1++2; is NOT acceptable
 ```
+
+#### Substraction Operator(-)
+```
+[0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
+"-"                                return MINUS;
+```
+ 
+
+For example;
+
+```
+1-2; is acceptable and result is -1
+1-2  is NOT acceptable
+1--2 is NOT acceptable
+```
+
+#### Multiplication Operator(*)
+
+```
+[0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
+"*"                               return STAR;
+```
+
+For example;
+
+```
+1*2; is acceptable and result is 2
+1*2  is NOT acceptable
+1**2 is NOT acceptable
+```
+
+#### Division Operator(/)
+
+```
+[0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
+"/"                               return SLASH;
+```
+
+For example;
+
+```
+20/2; is acceptable and result is 10
+20/2  is NOT acceptable
+20//2 is NOT acceptable
+```
+
+#### Modulus Operator(%)
+
+```
+[0-9][0-9]*                 {yylval.i = atoi(yytext);return INTEGER;}
+"%"                              return MOD;
+```
+
+For example;
+
+```
+20%2; is acceptable and result is 0
+20%2 is NOT acceptable
+20%%2 is NOT acceptable
+```
+
+### Precedence of the language's arithmetic operations
+
+
 
