@@ -133,6 +133,130 @@ For example;
 50+2*3;  This statement is valid and result is 56 (Use output command in order to see result in cmd)
 ```
 
+### Functions that implemented on language
+
+```
+int findIdent(char * name)
+{
+	int i;
+	for(i=0; i< 100; i++)
+	{
+		if(strcmp(mem[i].name,name) == 0) return i;
+	}
+	fprintf (stderr, "Variable \"%s\" is not declared\n", name);
+	exit(1);
+}
+```
+
+```
+int checkIdent(char * name)
+{
+	int i;
+	for(i=0; i< 100; i++)
+	{
+		if(strcmp(mem[i].name,name) == 0) return 1;
+	}
+	return 0;
+}
+```
+
+```
+int getIntValue(char * name)
+{
+	int position = findIdent(name);
+	if(mem[position].isInt == 0) 
+	{
+		fprintf(stderr, "ERROR: %s is not an integer\n", name);
+		exit(1);
+	}
+	
+	return mem[position].intValue;
+}
+```
+
+
+```
+char * getStrValue(char * name)
+{
+	int position = findIdent(name);
+	if(mem[position].isInt == 1) 
+	{
+		fprintf(stderr, "ERROR: %s is not a string\n", name);
+		exit(1);
+	}
+	
+	return mem[position].strValue;
+}
+```
+
+```
+void modifyInt (char * name, int value)
+{
+	int position = findIdent(name);
+	if(mem[position].isInt == 0) 
+	{
+		fprintf(stderr, "ERROR: %s is not an integer\n", name);
+		exit(1);
+	}
+	mem[position].intValue = value;
+}
+```
+
+```
+void modifyStr(char * name, char * value)
+{
+	int position = findIdent(name);
+	if(mem[position].isInt == 1) 
+	{
+		fprintf(stderr, "ERROR: %s is not a string\n", name);
+		exit(1);
+	}
+	strcpy(mem[findIdent(name)].strValue,value);
+}
+```
+
+```
+void saveInt(char * name, int value)
+{
+	if(checkIdent(name))
+	{
+		fprintf(stderr, "ERROR: %s has already been declared\n", name);
+		exit(1);
+	}
+
+	strcpy(mem[position].name,name);
+	mem[position].isInt = 1;
+	mem[position].intValue = value;
+	position++;
+}
+```
+
+
+```
+void saveStr(char * name, char * value)
+{
+	if(checkIdent(name))
+	{
+		fprintf(stderr, "ERROR: %s has already been declared\n", name);
+		exit(1);
+	}
+
+	strcpy(mem[position].name,name);
+	strcpy(mem[position].strValue,value);
+	mem[position].isInt = 0;
+	position++;
+}
+
+```
+
+
+
+
+
+
+
+
+
 
 ### BNF Notation of Variable Declarations
 
