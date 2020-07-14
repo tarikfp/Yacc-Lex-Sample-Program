@@ -170,6 +170,22 @@ term   		: INTEGER                   {$$ = $1;}
 
 ```
 
+### BNF Notation of Logical Operators and Loops 
 
+```
+stmt    		: IF condt scope		{;}	
+		| WHILE condt scope			{;}
+		;
+
+condt		: exp GT condt						
+		| exp ST condt 						
+		| exp EQUAL condt					
+		| exp NEQUAL condt					
+		| exp SEQUAL condt					
+		| exp GEQUAL condt					
+		| exp								
+		;
+
+```
 
 
