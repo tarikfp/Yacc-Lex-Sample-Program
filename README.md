@@ -28,5 +28,11 @@ For example;
 aaa is NOT num
 ```
 
+### String Declarations
 
+```
+\"[a-zA-Z0-9\ ]*\"          {strcpy(yylval.c,yytext);return STRING;}
+```
+
+As we can understand, user must define a char form of “[a-zA-Z]+”
 
