@@ -297,8 +297,8 @@ term   		: INTEGER
 ### BNF Notation of Logical Operators and Loops 
 
 ```
-stmt    	: IF condt scope		{;}	
-		| WHILE condt scope		{;}
+stmt    	: IF condt scope			
+		| WHILE condt scope		
 		;
 
 condt		: exp GT condt						
