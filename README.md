@@ -36,3 +36,12 @@ aaa is NOT num
 
 As we can understand, user must define a char form of “[a-zA-Z]+”
 
+For example;
+
+```
+"AAbb" is a string
+9459 is NOT a string
+0,734734 is NOT a string
+```
+
+
