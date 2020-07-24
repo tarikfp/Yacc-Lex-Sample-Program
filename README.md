@@ -315,5 +315,6 @@ condt		: exp GT condt
 
 
 
-### Screenshot
+### Screenshots
 ![](screenshot.png)
+![](comments.png)
