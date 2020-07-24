@@ -1,0 +1,47 @@
+// comment 1 ;
+
+int x = 0; 
+int y = 5;
+
+//int z = x + y;
+
+//str str1;
+//str str2 = "string two";
+//str1 = "string one";
+
+//outputc str1;
+//outputc str2;
+
+//y = y + 5 - 4 * 3 / 2 % 1;
+
+//x = 7;
+
+//output x;
+//output y;
+
+exit;
+
+
+int x;
+int y = 5;
+x = 2;
+
+output x + y * 3;
+//outputc x;
+
+str s = "ali";
+outputc s;
+//output s;
+
+if 1
+{
+    outputc "true";
+};
+
+while 123
+{
+    output 5;
+};
+
+
+exit;

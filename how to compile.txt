@@ -1,0 +1,4 @@
+lex myLanguage.l
+yacc -dy myLanguage.y
+gcc lex.yy.c y.tab.c
+a.exe
