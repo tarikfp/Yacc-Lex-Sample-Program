@@ -111,7 +111,7 @@ io		: OUTPUT exp						{printf("%d\n",$2);}
 		| OUTPUT STRING						{yyerror("ERROR - Value is not an integer");}
 		| OUTPUTC STRING					{printf("%s\n",$2);}
 		| OUTPUTC IDENT						{printf("%s\n",getStrValue($2));}
-		| OUTPUTC INTEGER					{yyerror("ERROR - Value is not a string");}
+		| OUTPUTC INTEGER					{yyerror("ERROR - Value is not a stringg");}
 		| INPUT IDENT						{scanf("%d",&mem[findIdent($2)].intValue);}
 		| INPUTC IDENT						{char s[100];scanf("%s",s); modifyStr($1,s);} 
 		;
