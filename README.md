@@ -1,4 +1,4 @@
-# tarik-yacc
+# Yacc/Lex Sample Program
 
 ### Project Group Member
 Tarık Fatih PINARCI
