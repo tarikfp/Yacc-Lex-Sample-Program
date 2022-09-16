@@ -1,8 +1,5 @@
 # Yacc/Lex Sample Program
 
-### Project Group Member
-Tarık Fatih PINARCI
-
 ### About The Language
 
 In my lexical code, I defined regular expression such as 
